@@ -2,6 +2,7 @@
 
 ORG=the-trump-dump
 REPOSITORIES_TEXT=https://github.com/${ORG}/__init__/blob/master/repositories.txt
+echo $REPOSITORIES_TEXT 
 GIT_TEMPLATE_ROOT=git@github.com:${ORG}
 start=$( cd `dirname $0` && pwd	 )
 echo "initializing from ${start} "
