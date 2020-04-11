@@ -1,4 +1,4 @@
 publisher
 ingest
-__init__
 the-trump-dump.github.io
+__init__
