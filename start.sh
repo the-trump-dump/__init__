@@ -1,10 +1,11 @@
 #!/usr/bin/env bash 
 
-REPOSITORIES_TEXT=https://github.com/bootiful-podcast/__init__/blob/master/repositories.txt
-GIT_TEMPLATE_ROOT=git@github.com:bootiful-podcast
+ORG=the-trump-dump
+REPOSITORIES_TEXT=https://github.com/${ORG}/__init__/blob/master/repositories.txt
+GIT_TEMPLATE_ROOT=git@github.com:${ORG}
 start=$( cd `dirname $0` && pwd	 )
 echo "initializing from ${start} "
-curl https://raw.githubusercontent.com/bootiful-podcast/__init__/master/repositories.txt | while read l ; do
+curl https://raw.githubusercontent.com/this-trump-dump/__init__/master/repositories.txt | while read l ; do
     d=$(echo $l | cut -f5 -d\/ | cut -f1 -d\. ) 
     echo "Processing $d"  
     dir_to_create=${start}/$d
