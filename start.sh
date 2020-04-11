@@ -14,6 +14,6 @@ curl ${REPOSITORIES_TEXT} | while read l ; do
     else
         echo "initializing ${dir_to_create}"  
         git_repo=${GIT_TEMPLATE_ROOT}/${d}.git
-        git clone ${git_repo} ${dir_to_create}
+        echo git clone ${git_repo} ${dir_to_create}
     fi
 done
